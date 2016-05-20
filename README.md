@@ -11,7 +11,7 @@ data (planning to make this insert into a database for work).
 The Loader class is a multiprocessing.Process object that is extended to include
 the Queue that is created in the Crawler class.
 
-A single process is used for loading the generated data so once the processing
+A **single** process is used for loading the generated data so once the processing
 pool is completed and joined back into the main process, we can submit a posion
 pill (aka None) that will break the Loader out of the run() method. This will
 let us exit the Loader process gracefully.
